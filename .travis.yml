@@ -1,7 +1,3 @@
-addons:
-  hostname: myshorthost
-  hosts:
-  - myshorthost
 install: mvn install -q -DskipTests=true
 jdk:
 - oraclejdk8
@@ -17,4 +13,5 @@ script:
   | wc -l);        fi
 services:
 - mongodb
-sudo: true
+- riak
+sudo: false
